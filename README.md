@@ -12,8 +12,8 @@ git clone https://github.com/jesusjsg/nvim-setup.git ~/.config/nvim
 
 ## Features
 
-- **Lazy.nvim**: A modern plugin manager that loads plugins efficiently.
-- **Autopairs**: Super powerful autopairs.
+- **Lazy.nvim**: A modern plugin manager that loads plugins efficiently [lazy.nvim](https://github.com/folke/lazy.nvim).
+- **Autopairs**: Super powerful autopairs [nvim-autopairs](https://github.com/windwp/nvim-autopairs).
 - **One dark pro**: Beautiful colorscheme for long coding sessions [onedarkpro.nvim](https://github.com/olimorris/onedarkpro.nvim). 
 - **Mason**: Manages external tools and language servers [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim).
 - **Indent blankline**: Indicates indentation levels [Indent-blankline.nvim](https://github.com/lukas-reineke/indent-blankline.nvim).
