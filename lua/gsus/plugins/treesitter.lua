@@ -16,8 +16,8 @@ return {
 	},
 	opts_extend = { "ensure_installed" },
 	opts = {
+		autotag = { enable = true },
 		highlight = { enable = true },
-		indent = { enable = true },
 		endsure_installed = {},
 		incremental_selection = {
 			enable = true,
