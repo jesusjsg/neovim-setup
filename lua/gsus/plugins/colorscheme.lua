@@ -1,8 +1,8 @@
 return {
-	"olimorris/onedarkpro.nvim",
-	priority = 1000,
-	lazy = false,
-	config = function()
-		vim.cmd([[colorscheme onedark_dark]])
-	end
+    "folke/tokyonight.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function()
+        vim.cmd("colorscheme tokyonight-night")
+    end
 }

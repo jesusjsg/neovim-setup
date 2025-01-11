@@ -11,7 +11,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 		vim.fn.getchar()
 		os.exit(1)
 	end
-end 
+end
+
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
@@ -19,7 +20,7 @@ require("lazy").setup({
 	{ import = "gsus.plugins.lsp" }
 
 }, {
-	install = { colorscheme = { "onedark" } },
+	install = { colorscheme = { "tokyonight" } },
 	checker = {
 		enabled = true,
 		notify = false
