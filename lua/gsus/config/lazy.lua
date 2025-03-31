@@ -20,7 +20,7 @@ require("lazy").setup({
 	{ import = "gsus.plugins.lsp" }
 
 }, {
-	install = { colorscheme = { "tokyonight" } },
+	install = { colorscheme = { "onedark" } },
 	checker = {
 		enabled = true,
 		notify = false

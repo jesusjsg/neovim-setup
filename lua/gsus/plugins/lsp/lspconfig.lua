@@ -20,11 +20,11 @@ return {
 		end
 
 		mason_lspconfig.setup_handlers({
-			function(server_name)
-				lspconfig[server_name].setup({
-					capabilities = capabilities,
-				})
-			end
+            function(server_name)
+                lspconfig[server_name].setup({
+                    capabilities = capabilities
+                })
+            end
 		})
 	end,
 }
