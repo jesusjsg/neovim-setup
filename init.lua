@@ -1,2 +1,2 @@
-require("gsus.config.options")
-require("gsus.config.lazy")
+require('config.options')
+require('config.lazy')
