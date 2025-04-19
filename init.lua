@@ -1,2 +1,2 @@
-require('config.options')
-require('config.lazy')
+require('sortbito.config.options')
+require('sortbito.config.lazy')
