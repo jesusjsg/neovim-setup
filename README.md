@@ -11,3 +11,5 @@ This repository contains my personal nvim configuration.
 * Nvim-tree for file exploration [details](https://github.com/nvim-tree/nvim-tree.lua)
 * Telescope for fuzzy finding [details](https://github.com/nvim-telescope/telescope.nvim)
 * Treesitter for syntax highlighting and parsing [details](https://github.com/nvim-treesitter/nvim-treesitter)
+* Supermaven for autocompletion by AI [details](https://github.com/supermaven-inc/supermaven-nvim)
+* Conform to format code [details](https://github.com/stevearc/conform.nvim)
