@@ -1,10 +1,9 @@
 return {
-	'projekt0n/github-nvim-theme',
-	name = 'github-theme',
-	lazy = false,
-	priority = 1000,
-	config = function()
-		require('github-theme').setup({})
-		vim.cmd('colorscheme github_dark_high_contrast')
-	end
+    'olimorris/onedarkpro.nvim',
+    lazy = false,
+    priority = 1000,
+    config = function()
+        require('onedarkpro').setup({})
+        vim.cmd('colorscheme onedark_dark')
+    end
 }
