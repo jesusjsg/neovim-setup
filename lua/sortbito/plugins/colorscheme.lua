@@ -1,9 +1,7 @@
 return {
-    'olimorris/onedarkpro.nvim',
-    lazy = false,
-    priority = 1000,
+    "rose-pine/neovim",
+    name = "rose-pine",
     config = function()
-        require('onedarkpro').setup({})
-        vim.cmd('colorscheme onedark_dark')
+        vim.cmd("colorscheme rose-pine")
     end
 }

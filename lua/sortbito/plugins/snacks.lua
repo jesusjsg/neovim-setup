@@ -6,7 +6,7 @@ return {
         Snacks.setup({
             dashboard = { enabled = true },
             win = { enabled = true },
-            image = { enabled = true },
+            image = {},
             indent = { enabled = true },
             picker = {
                 win = {
