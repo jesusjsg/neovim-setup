@@ -4,7 +4,6 @@ vim.scriptencoding = 'utf-8'
 vim.g.mapleader = " "
 
 opt.number = true
-opt.background = 'dark'
 opt.cursorline = true
 opt.showmode = false
 opt.termguicolors = true
