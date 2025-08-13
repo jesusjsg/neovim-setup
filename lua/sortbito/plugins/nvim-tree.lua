@@ -21,5 +21,4 @@ return {
         keymap('n', '<leader>ef', '<cmd>NvimTreeToggle<CR>', { desc = 'Toggle file explorer' })
         keymap('n', '<leader>ew', '<cmd>NvimTreeClose<CR>', { desc = 'Close the tree' })
     end
-
 }
