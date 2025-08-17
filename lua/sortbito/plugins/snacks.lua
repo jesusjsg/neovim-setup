@@ -6,6 +6,9 @@ return {
         Snacks.setup({
             dashboard = { enabled = true },
             win = { enabled = true },
+            bigfile = { enabled = true },
+            notifier = { enabled = true },
+            quickfile = { enabled = true },
             image = {},
             indent = { enabled = true },
             picker = {
@@ -24,11 +27,13 @@ return {
                     preset = "telescope",
                 },
             },
+            lazygit = { enabled = true },
         })
         vim.keymap.set('n', '<leader>ff', function()
             Snacks.picker.files()
         end, { desc = "Find Files" })
         vim.keymap.set('n', '<leader>fb', function() Snacks.picker.buffers() end, { desc = "Find Buffers" })
         vim.keymap.set('n', '<leader>fg', function() Snacks.picker.grep() end, { desc = "Find Grep" })
+        vim.keymap.set('n', '<leader>fb', function() Snacks.picker.buffers() end, { desc = "Find Buffers" })
     end,
 }
