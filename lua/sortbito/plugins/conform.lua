@@ -12,6 +12,9 @@ return {
                 typescriptreact = { "prettier" },
                 python = { "ruff_format", "black" },
                 lua = { "stylua" },
+                json = { "prettier" },
+                jsonc = { "prettier" }
+
             },
             format_on_save = {
                 timeout_ms = 500,
