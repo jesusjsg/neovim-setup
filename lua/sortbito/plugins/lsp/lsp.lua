@@ -15,7 +15,7 @@ return {
         local capabilities = cmp_nvim_lsp.default_capabilities()
 
         mason_lspconfig.setup({
-            ensure_installed = { 'lua_ls', 'pyright', 'ts_ls' },
+            ensure_installed = { 'lua_ls', 'ty', 'ts_ls' },
             handlers = {
                 function(server_name)
                     lspconfig[server_name].setup({
