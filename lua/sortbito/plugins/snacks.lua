@@ -9,7 +9,7 @@ return {
             bigfile = { enabled = true },
             notifier = { enabled = true },
             quickfile = { enabled = true },
-            image = {},
+            image = { enabled = true },
             indent = { enabled = true },
             picker = {
                 win = {

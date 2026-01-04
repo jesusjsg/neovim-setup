@@ -6,11 +6,8 @@ return {
             formatters_by_ft = {
                 javascript = { "prettier" },
                 typescript = { "prettier" },
-                css = { "prettier" },
-                html = { "prettier" },
-                javascriptreact = { "prettier" },
                 typescriptreact = { "prettier" },
-                python = { "ruff_format", "black" },
+                python = { "ruff_format", "ruff_fix" },
                 lua = { "stylua" },
                 json = { "prettier" },
                 jsonc = { "prettier" }
@@ -18,7 +15,7 @@ return {
             },
             format_on_save = {
                 timeout_ms = 500,
-                lsp_fallback = true,
+                lsp_format = "fallback"
             },
         })
     end
