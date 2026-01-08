@@ -78,7 +78,6 @@ return {
             item.kind = icons[item.kind] .. item.kind
           end
 
-          -- Truncar nombres largos
           local max_width = { abbr = 40, menu = 30 }
           for key, width in pairs(max_width) do
             if item[key] and vim.fn.strdisplaywidth(item[key]) > width then
