@@ -1,14 +1,32 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  tag = "v0.10.0",
-  lazy = false,
   branch = "main",
-  build = ":TSUpdate",
+  version = false,
+  event = { "BufReadPre", "BufNewFile" },
+  cmd = { "TSUpdate", "TSInstall", "TSLog", "TSUninstall" },
   config = function()
-    require("nvim-treesitter.configs").setup({
-      ensure_installed = { "lua", "markdown", "python", "javascript", "typescript" },
+    local treesitter = require("nvim-treesitter.configs")
+
+    treesitter.setup({
       highlight = { enable = true },
-      --indent = { enable = true },
+      ensure_installed = {
+        "json",
+        "javascript",
+        "typescript",
+        "yaml",
+        "markdown",
+        "markdown_inline",
+        "bash",
+        "lua",
+        "vim",
+        "dockerfile",
+        "gitignore",
+        "query",
+        "python",
+        "regex",
+        "toml",
+        "jsonc",
+      },
     })
   end,
 }
