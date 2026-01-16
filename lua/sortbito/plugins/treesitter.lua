@@ -1,14 +1,13 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  branch = "main",
-  version = false,
   event = { "BufReadPre", "BufNewFile" },
   cmd = { "TSUpdate", "TSInstall", "TSLog", "TSUninstall" },
   config = function()
-    local treesitter = require("nvim-treesitter.configs")
+    local treesitter = require("nvim-treesitter")
 
     treesitter.setup({
       highlight = { enable = true },
+      indent = { enable = true },
       ensure_installed = {
         "json",
         "javascript",
@@ -26,6 +25,15 @@ return {
         "regex",
         "toml",
         "jsonc",
+      },
+      incremental_selection = {
+        enable = true,
+        keymaps = {
+          init_selection = "<C-space>",
+          node_incremental = "<C-space>",
+          scope_incremental = false,
+          node_decremental = "<bs>",
+        },
       },
     })
   end,
