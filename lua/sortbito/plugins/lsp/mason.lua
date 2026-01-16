@@ -1,15 +1,21 @@
 return {
-  "mason-org/mason.nvim",
-  cmd = "Mason",
-  build = ":MasonUpdate",
-  opts_extend = { "ensure_installed" },
+  "mason-org/mason-lspconfig.nvim",
   opts = {
-    ensure_installed = { "stylua", "ruff", "biome", "ty", "lua-language-server", "typescript-language-server" },
+    ensure_installed = { "lua_ls", "ty", "ruff", "stylua", "biome" },
   },
-
-  config = function(_, opts)
-    local mason = require("mason")
-
-    mason.setup(opts)
-  end,
+  dependencies = {
+    {
+      "mason-org/mason.nvim",
+      opts = {
+        ui = {
+          icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗",
+          },
+        },
+      },
+    },
+    "neovim/nvim-lspconfig",
+  },
 }

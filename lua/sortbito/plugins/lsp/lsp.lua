@@ -1,15 +1,13 @@
 return {
   "neovim/nvim-lspconfig",
-  config = function()
-    vim.diagnostic.config({
-      virtual_text = true,
-      underline = true,
-      update_in_insert = false,
-      severity_sort = true,
-    })
+  dependencies = { "saghen/blink.cmp" },
 
-    vim.lsp.enable("biome")
-    vim.lsp.enable("lua_ls")
-    vim.lsp.enable("ty")
+  config = function()
+    local capabilities = require("blink.cmp").get_lsp_capabilities()
+    local lspconfig = require("lspconfig")
+
+    vim.lsp.config("*", {
+      capabilities = capabilities,
+    })
   end,
 }
