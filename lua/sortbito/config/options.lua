@@ -4,29 +4,38 @@ vim.g.snacks_animate = true
 
 local opt = vim.opt
 
+-- search settings
+opt.smartcase = true
+opt.ignorecase = true
+opt.hlsearch = false
+opt.showmatch = true
+
+-- tabs settings
+opt.expandtab = true
+opt.tabstop = 4
+opt.smartindent = true
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
+
+-- visual settings
+opt.wrap = true
+opt.linebreak = true
+opt.relativenumber = true
 opt.number = true
 opt.cursorline = true
 opt.termguicolors = true
-opt.relativenumber = true
+opt.showmode = false
+opt.smoothscroll = true
+
+-- window settings
 opt.splitbelow = true
 opt.splitright = true
+
+-- other settings
 opt.clipboard = "unnamedplus"
 opt.encoding = "utf-8"
 opt.fileencoding = "utf-8"
-opt.expandtab = true
-opt.hlsearch = false
-opt.ignorecase = true
-opt.smartcase = true
 opt.ttyfast = true
-opt.showmatch = true
-opt.expandtab = true
-opt.tabstop = 4
-opt.softtabstop = 4
-opt.shiftwidth = 4
 opt.autoindent = false
-opt.linebreak = true
-opt.mouse = "a"
-opt.showmode = false
-opt.smartindent = true
-opt.smoothscroll = true
 opt.undolevels = 10000
