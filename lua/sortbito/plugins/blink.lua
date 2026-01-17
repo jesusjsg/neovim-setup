@@ -4,19 +4,7 @@ return {
     version = "1.*",
     dependencies = {
       "rafamadriz/friendly-snippets",
-      {
-        "supermaven-inc/supermaven-nvim",
-        opts = {
-          disable_inline_completion = false,
-          disable_keymaps = false,
-          keymaps = {
-            accept_suggestion = "<C-]>",
-            clear_suggestion = "<C-c>",
-            accept_word = "<C-[",
-          },
-        },
-      },
-      { "huijiro/blink-cmp-supermaven" },
+      "folke/lazydev.nvim",
     },
 
     opts = {
@@ -36,12 +24,12 @@ return {
       },
 
       sources = {
-        default = { "lsp", "path", "supermaven", "snippets", "buffer" },
+        default = { "lazydev", "lsp", "path", "snippets", "buffer" },
         providers = {
-          supermaven = {
-            name = "supermaven",
-            module = "blink-cmp-supermaven",
-            async = true,
+          lazydev = {
+            name = "LazyDev",
+            module = "lazydev.integrations.blink",
+            score_offset = 100,
           },
         },
       },
