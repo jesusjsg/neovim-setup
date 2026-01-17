@@ -1,13 +1,8 @@
 return {
-  "neovim/nvim-lspconfig",
-  dependencies = { "saghen/blink.cmp" },
-
-  config = function()
-    local capabilities = require("blink.cmp").get_lsp_capabilities()
-    local lspconfig = require("lspconfig")
-
-    vim.lsp.config("*", {
-      capabilities = capabilities,
-    })
-  end,
+  "mason-org/mason-lspconfig.nvim",
+  opts = { ensure_installed = { "lua_ls", "ty", "ruff" } },
+  dependencies = {
+    { "mason-org/mason.nvim", opts = { opts } },
+    "neovim/nvim-lspconfig",
+  },
 }
