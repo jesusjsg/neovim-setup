@@ -5,7 +5,9 @@ return {
     local lualine = require("lualine")
 
     lualine.setup({
-      opts = { theme = "tokyonight-night" },
+      opts = {
+        theme = "tokyonight-night",
+      },
     })
   end,
 }
