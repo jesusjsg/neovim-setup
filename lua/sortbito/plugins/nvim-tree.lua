@@ -15,8 +15,7 @@ return {
     })
     local keymap = vim.keymap.set
 
-    keymap("n", "<leader>ee", "<cmd>NvimTreeOpen<CR>", { desc = "Open the tree" })
-    keymap("n", "<leader>eq", "<cmd>NvimTreeClose<CR>", { desc = "Closes the tree" })
+    keymap("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle the file explorer" })
     keymap(
       "n",
       "<leader>ef",
