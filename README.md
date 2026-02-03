@@ -19,3 +19,4 @@ This repository contains my personal nvim configuration.
 * Which-key for showing key bindings [details](https://github.com/folke/which-key.nvim)
 * Nvim-autopairs for automatically adding closing pairs [details](https://github.com/windwp/nvim-autopairs)
 * Oil for file explorer like a buffer [details](https://github.com/stevearc/oil.nvim)
+* Cloak for hidde environments values [details](https://github.com/laytan/cloak.nvim)
