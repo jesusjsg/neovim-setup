@@ -3,14 +3,12 @@ return {
   event = "VeryLazy",
   config = function()
     require("toggleterm").setup({
-      direction = "float",
-      float_opts = {
-        width = 100,
-        height = 20,
-        border = "curved",
-        winblend = 3,
-      },
+      direction = "vertical",
+      size = 70,
+      open_mapping = [[<C-\>]],
+      auto_scroll = true,
+      close_on_exit = true,
+      start_in_insert = true,
     })
-    vim.keymap.set("n", "<leader>tt", ":ToggleTerm<CR>")
   end,
 }
