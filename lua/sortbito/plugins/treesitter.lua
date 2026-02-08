@@ -2,6 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   event = { "BufReadPre", "BufNewFile" },
   cmd = { "TSUpdate", "TSInstall", "TSLog", "TSUninstall" },
+  dependencies = { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
   config = function()
     local treesitter = require("nvim-treesitter")
 
