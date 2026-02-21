@@ -27,4 +27,7 @@ return {
       vim.keymap.set("n", "<leader>td", "<cmd>TodoFzfLua<CR>", { desc = "Find todo comments" })
     end,
   },
+  {
+    "numToStr/Comment.nvim",
+  },
 }
