@@ -20,7 +20,7 @@ require("lazy").setup({
     { import = "sortbito.plugins.lsp" },
   },
   checker = {
-    enabled = true,
+    enabled = false,
     notify = false,
   },
 })
