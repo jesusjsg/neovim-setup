@@ -17,3 +17,5 @@ This repository contains my personal nvim configuration.
 * Oil for file explorer like a buffer [details](https://github.com/stevearc/oil.nvim)
 * Cloak for hidde environments values [details](https://github.com/laytan/cloak.nvim)
 * Todo comments for handle easily comments notes [details](https://github.com/folke/todo-comments.nvim)
+* Comment for handle easily comments notes [details](https://github.com/numToStr/Comment.nvim)
+* Undotree for handle undo history [details](https://github.com/mbbill/undotree)
