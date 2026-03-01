@@ -64,6 +64,12 @@ return {
       desc = "Notification History",
     },
     {
+      "<leader>fj",
+      function()
+        Snacks.picker.git_branches()
+      end,
+    },
+    {
       "<leader>gg",
       function()
         Snacks.lazygit.open()
