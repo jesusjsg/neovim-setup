@@ -2,7 +2,6 @@ return {
   "folke/snacks.nvim",
   priority = 1000,
   lazy = false,
-  -- snacks.Config
   opts = {
     bigfile = { enabled = true },
     indent = { enabled = true },
@@ -11,9 +10,7 @@ return {
     quickfile = { enabled = true },
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
-    words = { enabled = true },
     lazygit = { enabled = true, win = { width = 0.9, height = 0.9, position = "float" } },
-    picker = { enabled = true },
     terminal = {
       enabled = true,
       win = {
@@ -29,45 +26,11 @@ return {
   },
   keys = {
     {
-      "<leader>ff",
-      function()
-        Snacks.picker.files()
-      end,
-      desc = "Find Files",
-    },
-    {
-      "<leader>fb",
-      function()
-        Snacks.picker.buffers()
-      end,
-      desc = "Find buffers",
-    },
-    {
-      "<leader>fg",
-      function()
-        Snacks.picker.grep()
-      end,
-      desc = "Find grep",
-    },
-    {
-      "<leader>fr",
-      function()
-        Snacks.picker.recent()
-      end,
-      desc = "Recent",
-    },
-    {
       "<leader>n",
       function()
         Snacks.notifier.show_history()
       end,
       desc = "Notification History",
-    },
-    {
-      "<leader>fj",
-      function()
-        Snacks.picker.git_branches()
-      end,
     },
     {
       "<leader>gg",
