@@ -1,32 +1,24 @@
 return {
-  "mason-org/mason-lspconfig.nvim",
-  opts = {
-    ensure_installed = { "lua_ls", "ty", "ruff", "tombi", "biome", "marksman", "stylua" },
-  },
+  "neovim/nvim-lspconfig",
   dependencies = {
-    { "mason-org/mason.nvim", opts = true },
-    "neovim/nvim-lspconfig",
-  },
-  config = function(_, opts)
-    require("mason").setup()
-    require("mason-lspconfig").setup(opts)
-
-    vim.diagnostic.config({
-      virtual_text = true,
-      signs = true,
-      underline = true,
-      update_in_insert = false,
-      severity_sort = true,
-      float = {
-        focusable = false,
-        border = "rounded",
-        source = "always",
+    {
+      "folke/lazydev.nvim",
+      ft = "lua",
+      opts = {
+        library = {
+          { path = "luvit-meta/library", words = { "vim%.uv" } },
+          { path = "/usr/share/awesome/lib/", words = { "awesome" } },
+        },
       },
+    },
+    { "Bilal2453/luvit-meta", lazy = true },
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "WhoIsSethDaniel/mason-tool-installer.nvim",
+  },
+  config = function()
+    vim.lsp.config("*", {
+      capabilities = require("blink-cmp").get_lsp_capabilities(),
     })
-
-    vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic" })
-    vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Prev diagnostic" })
-    vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Next diagnostic" })
-    vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Diagnostic list" }) -- In some times this keymap is slow
   end,
 }
