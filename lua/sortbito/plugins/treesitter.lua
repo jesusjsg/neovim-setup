@@ -1,14 +1,14 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  event = { "BufReadPre", "BufNewFile" },
-  cmd = { "TSUpdate", "TSInstall", "TSLog", "TSUninstall" },
+  lazy = false,
+  build = ":TSUpdate",
+  branch = "main",
   dependencies = { "windwp/nvim-autopairs", event = "InsertEnter", config = true },
   config = function()
-    local treesitter = require("nvim-treesitter")
-
-    treesitter.setup({
-      highlight = { enable = true },
-      indent = { enable = true },
+    require("nvim-treesitter.configs").setup({
+      auto_install = true,
+      modules = {},
+      sync_install = false,
       ensure_installed = {
         "json",
         "javascript",
@@ -26,6 +26,10 @@ return {
         "regex",
         "toml",
         "jsonc",
+      },
+      ignore_install = {},
+      highlight = {
+        enable = true,
       },
       incremental_selection = {
         enable = true,
