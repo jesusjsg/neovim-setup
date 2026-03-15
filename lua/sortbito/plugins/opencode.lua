@@ -49,17 +49,5 @@ return {
     vim.keymap.set({ "n", "x" }, "go", function()
       return require("opencode").operator("@this ")
     end, { desc = "Add range to opencode", expr = true })
-
-    vim.keymap.set("n", "ad", function()
-      return require("opencode").operator("@this ") .. "_"
-    end, { desc = "Add line to opencode", expr = true })
-
-    vim.keymap.set("n", "<S-C-u>", function()
-      require("opencode").command("session.half.page.up")
-    end, { desc = "Scroll opencode up" })
-
-    vim.keymap.set("n", "<S-C-d>", function()
-      require("opencode").command("session.half.page.down")
-    end, { desc = "Scroll opencode down" })
   end,
 }
