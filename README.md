@@ -19,3 +19,4 @@ This repository contains my personal nvim configuration.
 * Todo comments for handle easily comments notes [details](https://github.com/folke/todo-comments.nvim)
 * Comment for handle easily comments notes [details](https://github.com/numToStr/Comment.nvim)
 * Undotree for handle undo history [details](https://github.com/mbbill/undotree)
+* Telescope for handle fuzzy search [details](https://github.com/nvim-telescope/telescope.nvim)
